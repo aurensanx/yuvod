@@ -1,0 +1,171 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:all",
+    "plugin:react/all",
+    "plugin:import/recommended"
+  ],
+  "ignorePatterns": [
+    "dist/",
+    "node_modules/"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "array-element-newline": "off",
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "class-methods-use-this": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "exports": "never",
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "func-style": 0,
+    "function-call-argument-newline": 0,
+    "id-length": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal"
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "group": "external",
+            "pattern": "react",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ]
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "jsx-quotes": ["error", "prefer-single"],
+    "max-len": 0,
+    "max-lines-per-function": 0,
+    "multiline-ternary": "off",
+    "no-confusing-arrow": "off",
+    "no-extra-parens": [
+      "error",
+      "all",
+      {
+        "ignoreJSX": "multi-line"
+      }
+    ],
+    "no-magic-numbers": 0,
+    "no-mixed-operators": "off",
+    "no-ternary": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "object-property-newline": "off",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "padded-blocks": 0,
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "next": "return",
+        "prev": "*"
+      },
+      {
+        "blankLine": "any",
+        "next": [
+          "const",
+          "let",
+          "var"
+        ],
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ]
+      }
+    ],
+    "quote-props": 0,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/forbid-component-props": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
+    "react/jsx-max-depth": 0,
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-newline": 0,
+    "react/jsx-no-literals": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "require-unicode-regexp": "off",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "sort-imports": "off",
+    "sort-keys": "off",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "named": "never"
+      }
+    ],
+    "linebreak-style": "off",
+    "no-nested-ternary": "off",
+    "prefer-named-capture-group": "off",
+    "capitalized-comments": "off"
+  }
+}
