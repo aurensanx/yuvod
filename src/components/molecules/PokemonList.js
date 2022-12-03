@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-import { API_ROUTES, API_URL } from '../../constants/api'
-import { PAGINATION } from '../../constants/pagination'
-import { useFetch } from '../../hooks/useFetch'
-import { Pokemon } from '../atoms/Pokemon'
+import { Pokemon } from '../atoms/ui/Pokemon'
 
 const StyledUl = styled.ul`
   display: flex;
@@ -12,16 +9,11 @@ const StyledUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 10rem;
 `
 
-export const PokemonList = () => {
-  const { data } = useFetch(`${API_URL}${API_ROUTES.POKEMON}?limit=${PAGINATION.PAGE_SIZE}`)
-
-  const pokemonList = data?.results || []
-
-  return (
-    <StyledUl>
-      {pokemonList.map(({ name }) => <Pokemon key={name} name={name} />)}
-    </StyledUl>
-  )
-}
+export const PokemonList = ({ pokemonList }) => (
+  <StyledUl>
+    {pokemonList.map(({ name }) => <Pokemon key={name} name={name} />)}
+  </StyledUl>
+)

@@ -1,4 +1,4 @@
-import { Flex } from './Flex'
+import { Flex } from '../utils/Flex'
 
 export const Header = () => (
   <Flex justify='center'>
