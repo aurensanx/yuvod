@@ -1,5 +1,9 @@
+import { Header } from './components/atoms/Header'
+import { MainContent } from './components/organisms/MainContent'
+
 export const App = () => (
-  <div>
-    <h1>React from Scratch</h1>
-  </div>
+  <>
+    <Header />
+    <MainContent />
+  </>
 )
