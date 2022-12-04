@@ -1,8 +1,17 @@
 import { useCallback, useEffect, useState } from 'react'
 
+import styled from 'styled-components'
+
 import { useDebounce } from '../../../hooks/useDebounce'
 
-export const SearchBar = ({ setSearchText }) => {
+
+const StyledInput = styled.input`
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid lightgray;
+`
+
+export const SearchBar = ({ placeholder, setSearchText }) => {
   const [inputValue, setInputValue] = useState('')
   const debouncedValue = useDebounce(inputValue)
 
@@ -14,5 +23,5 @@ export const SearchBar = ({ setSearchText }) => {
     setSearchText(debouncedValue)
   }, [debouncedValue])
 
-  return <input data-cy='search-bar' onChange={handleChange} value={inputValue} />
+  return <StyledInput data-cy='search-bar' onChange={handleChange} placeholder={placeholder} value={inputValue} />
 }

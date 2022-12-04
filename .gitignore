@@ -6,3 +6,7 @@
 
 # IDEs
 /.idea
+
+#cypress
+/cypress/screenshots/
+/cypress/videos/

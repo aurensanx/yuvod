@@ -22,7 +22,7 @@ export const MainContent = () => {
   return (
     <Flex align='center' direction='column'>
       <ResultWrapper direction='column' gap='1.5rem'>
-        <SearchBar setSearchText={setSearchText} />
+        <SearchBar placeholder='Search Pokemon...' setSearchText={setSearchText} />
         <PokemonSearchResult data={data} page={page} setPage={setPage} />
       </ResultWrapper>
     </Flex>
