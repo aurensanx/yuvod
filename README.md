@@ -30,7 +30,7 @@ o si hubiera la oportunidad `Apollo Client` para `GraphQL`.
 
 ### Carpetas
 
-He dividido la carpeta components en 3 subcapetas: atoms, molecules y organisms. 
+He dividido la carpeta `components` en 3 subcapetas: `atoms`, `molecules` y `organisms`. 
 En una aplicación real probablemente hubiera nombrado estas carpetas de manera diferente, 
 pero lo he hecho así para ilustrar el uso de la metodología Atomic Design, que comentamos en la entrevista.
 
