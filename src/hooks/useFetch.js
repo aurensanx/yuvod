@@ -5,10 +5,24 @@ export const useFetch = url => {
   const [error, setError] = useState()
 
   useEffect(() => {
-    fetch(url).
-      then(response => response.json()).
-      then(setData).
+    let isSubscribed = true
+
+    const fetchData = async () => {
+      const response = await fetch(url)
+      const json = await response.json()
+
+      if (isSubscribed) {
+        setData(json)
+      }
+    }
+
+    fetchData().
       catch(setError)
+
+    return () => {
+      isSubscribed = false
+    }
+
   }, [url])
 
   return { data, error }
