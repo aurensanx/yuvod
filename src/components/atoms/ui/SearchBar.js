@@ -14,5 +14,5 @@ export const SearchBar = ({ setSearchText }) => {
     setSearchText(debouncedValue)
   }, [debouncedValue])
 
-  return <input onChange={handleChange} value={inputValue} />
+  return <input data-cy='search-bar' onChange={handleChange} value={inputValue} />
 }

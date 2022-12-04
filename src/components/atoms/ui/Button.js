@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  cursor: pointer;
+  ${({ disabled }) => disabled ? '' : 'cursor: pointer'};
+  min-width: 3rem;
 `
 
 export const Button = ({ disabled, handleClick, children }) => (

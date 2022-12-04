@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Pokemon } from '../atoms/ui/Pokemon'
+import { PokemonName } from '../../atoms/ui/PokemonName'
 
 const StyledUl = styled.ul`
   display: flex;
@@ -12,7 +12,7 @@ const StyledUl = styled.ul`
 `
 
 export const PokemonList = ({ pokemonList }) => (
-  <StyledUl>
-    {pokemonList.map(({ name }) => <Pokemon key={name} name={name} />)}
+  <StyledUl data-cy='pokemon-list'>
+    {pokemonList.map(({ name }) => <PokemonName key={name} name={name} />)}
   </StyledUl>
 )

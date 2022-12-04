@@ -13,7 +13,7 @@ export const Pagination = ({ page, setPage, count }) => {
   const disableNext = lastPage <= page || !count
 
   return (
-    <Flex gap='1rem' justify='center'>
+    <Flex gap='1rem' justify='space-around'>
       <GoToFirstPageButton disabled={disablePrev} setPage={setPage} />
       <GoToPreviousPageButton disabled={disablePrev} setPage={setPage} />
       <p>{page + 1}</p>
